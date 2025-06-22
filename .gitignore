@@ -365,3 +365,4 @@ FodyWeavers.xsd
 /BankingSystem/bank.db
 /BankAccountAPI/appsettings.json
 /BankAccountAPI/bank.db
+/BankAccountAPI/appsettings.Development.json
