@@ -13,7 +13,7 @@ Essa API foi desenvolvida simulando operações bancárias seguindo as principai
 
 Este projeto apresenta:
 
-- **CRUD de Conta Bancária**
+**CRUD de Conta Bancária**
   - Criar conta
   - Consultar conta
   - Atualizar conta
@@ -21,7 +21,7 @@ Este projeto apresenta:
   - Consultar saldo
   - Consultar extrato bancário (lista de transações com descrição e valores)
 
-- **Transações Bancárias**
+  **Transações Bancárias**
   - Depósito
   - Saque
   - Transferência entre contas
@@ -38,18 +38,18 @@ Este projeto apresenta:
 
 ## Arquitetura
 
-- **Camadas separadas:**
+**Camadas separadas:**
   - `Entities`: Entidades do domínio
   - `Requests`: Modelos para entrada de dados
   - `Responses`: Modelos para saída de dados (não expõem dados sensíveis para o Front-end)
 
-- **Saldo:**  
+**Saldo:**  
 O saldo (**CurrentBalance**) não é um campo fixo, e sim um campo calculado a partir de transações feitas na conta.
 
-- **Ciclo de vida das dependências:**  
+**Ciclo de vida das dependências:**  
 Os repositórios são registrados como `Scoped` no `Program.cs`, garantindo uma única instância por requisição e evitando concorrência e inconsistências nas transações bancárias.
 
-- **Operações assíncronas:**  
+**Operações assíncronas:**  
 Todas as operações que acessam dados (banco de dados) são implementadas com `async/await` para garantir performance e escalabilidade.
 
 
